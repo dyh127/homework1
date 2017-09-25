@@ -185,11 +185,11 @@ int ustc_CalcHist(Mat grayImg, int* hist, int hist_len)
 	Mat raw_img = grayImg;
 	uchar* raw_img1 = grayImg.data;
 	int hen = raw_img.rows*raw_img.cols;
-	for (int i; i < hist_len; i++)
+	for (int i=0; i < hist_len; i++)
 	{
 		hist[i] = 0;
 	}
-	for (int i; i < hen; i++)
+	for (int i=0; i < hen; i++)
 	{
 		hist[*raw_img1]++;
 		raw_img1++;
